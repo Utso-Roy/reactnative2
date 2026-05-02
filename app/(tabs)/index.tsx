@@ -12,6 +12,7 @@ import {
 } from "react-native";
 
 export default function App() {
+
   const [visible, setVisible] = useState(false);
 
   return (
@@ -85,12 +86,16 @@ const styles = StyleSheet.create({
     height: 80,
     backgroundColor: "red",
     margin: 5,
+  
   },
   box2: {
     width: 80,
     height: 80,
     backgroundColor: "blue",
     margin: 5,
+    position: 'absolute',
+    top: 50,
+
   },
   box3: {
     width: 80,
