@@ -86,6 +86,11 @@ const styles = StyleSheet.create({
     height: 80,
     backgroundColor: "red",
     margin: 5,
+    position: 'relative',
+    top: 80,
+    right: 60,
+    borderRadius: 5
+ 
   
   },
   box2: {
@@ -95,6 +100,8 @@ const styles = StyleSheet.create({
     margin: 5,
     position: 'absolute',
     top: 50,
+        borderRadius: 5
+
 
   },
   box3: {
@@ -102,12 +109,16 @@ const styles = StyleSheet.create({
     height: 80,
     backgroundColor: "green",
     margin: 5,
+        borderRadius: 5
+
   },
   box4: {
     width: 80,
     height: 80,
     backgroundColor: "orange",
     margin: 5,
+        borderRadius: 5
+
   },
   text: {
     fontSize: 16,
