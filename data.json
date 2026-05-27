@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "React Native Course",
+    "description": "Learn React Native from beginner to advanced level.",
+    "price": 49.99,
+    "image": "https://reactnative.dev/img/tiny_logo.png"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript Mastery",
+    "description": "Complete JavaScript guide with projects.",
+    "price": 39.99,
+    "image": "https://example.com/javascript.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Node.js Backend",
+    "description": "Build scalable backend applications using Node.js.",
+    "price": 59.99,
+    "image": "https://example.com/nodejs.jpg"
+  },
+  {
+    "id": 4,
+    "title": "UI/UX Design",
+    "description": "Design modern and user-friendly mobile interfaces.",
+    "price": 29.99,
+    "image": "https://example.com/uiux.jpg"
+  },
+  {
+    "id": 5,
+    "title": "MongoDB Database",
+    "description": "Understand MongoDB and build database-driven apps.",
+    "price": 44.99,
+    "image": "https://example.com/mongodb.jpg"
+  }
+]
