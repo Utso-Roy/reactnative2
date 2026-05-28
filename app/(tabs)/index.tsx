@@ -1,70 +1,82 @@
-import { View, Text, StyleSheet, Image, ScrollView } from 'react-native'
-import React from 'react'
+import React from "react";
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+
 import data from "../../data.json";
 
 export default function Index() {
 
-  return (
+  const renderCard = ({ item }) => (
 
-    <ScrollView>
+    <View style={styles.card}>
 
-      <View style={styles.container}>
+      <Image
+        source={{
+          uri: item.image,
+        }}
+        style={styles.image}
+      />
 
-        {
-          data.map((item) => (
+      <View style={styles.content}>
 
-            <View style={styles.card} key={item.id}>
+        <Text style={styles.title}>
+          {item.title}
+        </Text>
 
-              <Image
-                source={{
-                  uri: item.image,
-                }}
-                style={styles.image}
-              />
+        <Text style={styles.description}>
+          {item.description}
+        </Text>
 
-              <View style={styles.content}>
-
-                <Text style={styles.title}>
-                  {item.title}
-                </Text>
-
-                <Text style={styles.description}>
-                  {item.description}
-                </Text>
-
-                <Text style={styles.price}>
-                  ${item.price}
-                </Text>
-
-              </View>
-
-            </View>
-
-          ))
-        }
+        <Text style={styles.price}>
+          ${item.price}
+        </Text>
 
       </View>
 
-    </ScrollView>
+    </View>
 
-  )
+  );
+
+  return (
+
+    <FlatList
+      data={data}
+
+      renderItem={renderCard}
+
+      keyExtractor={(item) => item.id.toString()}
+
+      showsVerticalScrollIndicator={false}
+
+      contentContainerStyle={{
+        paddingTop: 40,
+        alignItems: "center",
+        backgroundColor: "#f2f2f2",
+        paddingBottom: 40,
+      }}
+
+      ItemSeparatorComponent={() => (
+        <View style={{ height: 20 }} />
+      )}
+      ListHeaderComponent={<Text style={styles.header} >Welcome to Our Course </Text>}
+
+    />
+
+  );
 }
 
 const styles = StyleSheet.create({
-
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    paddingTop: 40,
-    backgroundColor: "#f2f2f2",
-  },
 
   card: {
     width: 320,
     backgroundColor: "white",
     borderRadius: 15,
     overflow: "hidden",
-    marginBottom: 20,
 
     shadowColor: "#000",
     shadowOpacity: 0.2,
@@ -98,5 +110,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "green",
   },
+  header: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    color : 'green'
+    
+  }
 
 });
